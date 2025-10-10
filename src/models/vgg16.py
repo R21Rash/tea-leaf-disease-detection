@@ -26,8 +26,8 @@ def build_vgg16(num_classes: int, img_size: int = 224, freeze_backbone: bool = F
     return vgg
 
 
-# (Optional) helpers if you later want to unfreeze *only* part of the backbone.
-# Not used by default (your train.py uses a simple "unfreeze all" toggle),
+# (Optional) helpers to unfreeze *only* part of the backbone.
+# Not used by default (train.py uses a simple "unfreeze all" toggle),
 # but available for future experiments without touching train.py.
 def unfreeze_last_conv_blocks(vgg_model: nn.Module, blocks: int = 1):
     """
